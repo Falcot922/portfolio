@@ -12,9 +12,21 @@
     <div id="navContainer">
         <nav id="navBar">
             <ul>
-                <li data-target="about"><a href="#presentation">ABOUT ME</a></li>
-                <li data-target="projects"><a href="#projets">MY PROJECTS</a></li>
-                <li data-target="hobbies"><a href="#contact">HOBBIES</a></li>
+                <li data-target="about">
+                    <a href="#presentation">
+                        <span>ABOUT ME</span>
+                    </a>
+                </li>
+                <li data-target="projects">
+                    <a href="#projets">
+                        <span>MY PROJECTS</span>
+                    </a>
+                </li>
+                <li data-target="hobbies">
+                    <a href="#contact">
+                        <span>HOBBIES</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -50,9 +62,9 @@
         <div class="identify">
             <div class="reseau">
                 
-                <a href="https://github.com/Falcot922">github</a>
-                <a href="https://www.linkedin.com/in/julienbiout">linkedin</a>
-                <a href="https://open.spotify.com/user/nn3pdi2fshit2f89cynwgkr7h">spotify</a>
+                <button class="social-button"><a href="https://github.com/Falcot922">github</a></button>
+                <button class="social-button"><a href="https://www.linkedin.com/in/julienbiout">linkedin</a></button>
+                <button class="social-button"><a href="https://open.spotify.com/user/nn3pdi2fshit2f89cynwgkr7h">spotify</a></button>
                 
             </div>
             <h1>Julien BIOUT</h1>
@@ -75,10 +87,10 @@
                     <p id="albumArtist" class="album-artist">Artist Name</p>
                     <span id="albumYear" class="album-year">—</span>
                     <p id="favoriteSong" class="favorite-song">Favorite Song</p>
-                    <div class="arrow">
-                        <button class="arrow-button" id="arrowLeft">←</button>
-                        <button class="arrow-button" id="arrowRight">→</button>
-                    </div>
+                </div>
+                <div class="arrowNav">
+                        <button class="arrow-button" id="arrowLeft"><span>←</span></button>
+                        <button class="arrow-button" id="arrowRight"><span>→</span></button>
                 </div>
             </div>
         </div>

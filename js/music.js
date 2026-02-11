@@ -1,8 +1,8 @@
 const albums = [
     { title: "Hybrid Theory", artist: "Linkin Park", year: "2000", src: "../images/HB.jpg" },
-    { title: "ALBUM DEUX", artist: "Artiste 2", year: "2019", src: "covers/album2.jpg" },
-    { title: "ALBUM TROIS", artist: "Artiste 3", year: "2022", src: "covers/album3.jpg" },
-    { title: "ALBUM QUATRE", artist: "Artiste 4", year: "2018", src: "covers/album4.jpg" },
+    { title: "Slipknot", artist: "Slipknot", year: "1999", fav: "Eyeless", favLink: "https://genius.com/Slipknot-eyeless-lyrics", src: "../images/slipknot.jpg" },
+    { title: "Destin", artist: "Ninho", year: "2019", fav: "Goutte d'eau", favLink: "https://genius.com/Ninho-goutte-deau-lyrics", src: "../images/destin.jpg" },
+    { title: "For Those That Wish to Exist", artist: "Architect", year: "2021", fav: "Impermanence", favLink: "https://genius.com/Architects-impermanence-lyrics", src: "../images/fttwte.jpg" },
     { title: "ALBUM CINQ", artist: "Artiste 5", year: "2023", src: "covers/album5.jpg" },
     { title: "ALBUM SIX", artist: "Artiste 6", year: "2020", src: "covers/album6.jpg" },
 ];
@@ -15,6 +15,7 @@ const yearEl = document.getElementById('albumYear');
 const indexEl = document.getElementById('albumIndex');
 const btnPrev = document.getElementById('arrowLeft');
 const btnNext = document.getElementById('arrowRight');
+const favSongEl = document.getElementById('favoriteSong');
 
 let current = 0;
 let cards   = [];
@@ -56,6 +57,8 @@ function updateInfo(animated = true) {
     const album = albums[current];
     const n = albums.length;
     const bg = document.getElementById("albumBg");
+    const fav = album.fav ? `<a href="${album.favLink}" target="_blank" style="color: white">${album.fav}</a>` : '';
+    const fav2 = document.getElementById("favoriteSong");
     if (animated) {
         infoEl.classList.add('changing');
 
@@ -63,6 +66,8 @@ function updateInfo(animated = true) {
             titleEl.textContent = album.title;
             artistEl.textContent = album.artist;
             yearEl.textContent = album.year;
+            favSongEl.innerHTML = fav;
+            fav2.style.display = fav ? 'block' : 'none';
             indexEl.textContent =
                 String(current + 1).padStart(2, '0') +
                 ' / ' +
